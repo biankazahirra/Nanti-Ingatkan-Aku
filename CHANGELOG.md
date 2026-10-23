@@ -74,6 +74,14 @@ permission in release.
 - No analytics, no crash reporting, no user text in logs (codes, counts and
   timestamps only).
 
+### Verified
+
+On Flutter 3.47.7 / Dart 3.13.5, against this tree:
+
+- `flutter analyze` → `No issues found!`
+- `dart format --set-exit-if-changed lib test` → `0 changed`
+- `flutter test` → `+202: All tests passed!`
+
 ### Known limitations
 
 - Notification delivery is delegated to Android and is best-effort; inexact

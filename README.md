@@ -184,6 +184,25 @@ Tests use `sqflite_common_ffi` with an in-memory database and fakes for the
 scheduler, the file picker and the clock (`test/support/`), so no plugin, device
 or network access is needed.
 
+Verified on Flutter 3.47.7 / Dart 3.13.5:
+
+```
+$ flutter analyze
+No issues found! (ran in 27.9s)
+
+$ dart format --set-exit-if-changed lib test
+Formatted 67 files (0 changed) in 0.54 seconds.
+
+$ flutter test
+00:32 +202: All tests passed!
+```
+
+Widget tests that touch the database must wrap the call in `withDatabase`, or
+settle the tree with `settleWithDatabase` (`test/support/widget_env.dart`). A
+`testWidgets` body runs in the fake-async zone, which never drains the reply that
+`sqflite` sends from its background isolate, so a bare `await deps.memories.count()`
+inside a body hangs until the ten-minute test timeout.
+
 ## 9. Verified versus unverified
 
 This repository was built and analysed on a machine without an Android SDK, so:
