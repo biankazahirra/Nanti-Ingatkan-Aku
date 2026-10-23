@@ -1,0 +1,349 @@
+{
+  "@@locale": "id",
+
+  "appName": "Nanti Ingatkan Aku",
+  "appTagline": "Simpan hal kecil sebelum lupa.",
+
+  "navToday": "Hari Ini",
+  "navMemories": "Catatan",
+  "navSettings": "Pengaturan",
+
+  "captureTitleHint": "Apa yang ingin kamu ingat?",
+  "captureBodyHint": "Detail (opsional)",
+  "captureRemindMe": "Ingatkan aku",
+  "captureSave": "Simpan",
+  "captureSaved": "Catatan tersimpan",
+  "captureNewTitle": "Catat",
+  "captureEditTitle": "Ubah catatan",
+  "captureTitleCounter": "{count}/{max}",
+  "@captureTitleCounter": {
+    "placeholders": {
+      "count": {"type": "int"},
+      "max": {"type": "int"}
+    }
+  },
+  "captureBodyCounter": "{count}/{max}",
+  "@captureBodyCounter": {
+    "placeholders": {
+      "count": {"type": "int"},
+      "max": {"type": "int"}
+    }
+  },
+
+  "categoryGeneral": "Umum",
+  "categoryLentItem": "Dipinjamkan",
+  "categoryWarranty": "Garansi",
+  "categoryMaintenance": "Perawatan",
+  "categoryAll": "Semua",
+  "categoryChangeTitle": "Ganti kategori?",
+  "categoryClearMetadata": "Isian yang tidak lagi berlaku untuk kategori baru akan dihapus.",
+
+  "fieldLentTo": "Dipinjamkan ke",
+  "fieldItemName": "Nama barang",
+  "fieldWarrantyEnd": "Garansi berakhir",
+  "fieldPickDate": "Pilih tanggal",
+
+  "reminderSectionTitle": "Pengingat",
+  "reminderPreset1h": "1 jam lagi",
+  "reminderPresetTonight": "Nanti malam (20.00)",
+  "reminderPresetTomorrow": "Besok (09.00)",
+  "reminderPresetWeek": "Minggu depan",
+  "reminderPick": "Pilih tanggal & waktu",
+  "reminderScheduled": "Terjadwal",
+  "reminderScheduledAt": "Terjadwal {when}",
+  "@reminderScheduledAt": {
+    "placeholders": {
+      "when": {"type": "String"}
+    }
+  },
+  "reminderInexact": "Perkiraan waktu (bisa terlambat beberapa menit).",
+  "reminderPermissionNeeded": "Perlu izin notifikasi",
+  "reminderFailed": "Gagal dijadwalkan",
+  "reminderOverdue": "Terlewat",
+  "reminderOverdueSince": "Terlewat sejak {when}",
+  "@reminderOverdueSince": {
+    "placeholders": {
+      "when": {"type": "String"}
+    }
+  },
+  "reminderDone": "Selesai",
+  "reminderDoneAt": "Selesai pada {when}",
+  "@reminderDoneAt": {
+    "placeholders": {
+      "when": {"type": "String"}
+    }
+  },
+  "reminderMarkDone": "Tandai selesai",
+  "reminderCreate": "Buat pengingat",
+  "reminderChange": "Ubah pengingat",
+  "reminderNew": "Buat pengingat baru",
+  "reminderDeferred": "Menunggu penjadwalan",
+  "reminderRetry": "Coba lagi",
+  "reminderOpenSettings": "Buka pengaturan",
+  "reminderNone": "Belum ada pengingat.",
+  "reminderZoneNote": "Diatur pada zona {original}; perangkat sekarang di {current}.",
+  "@reminderZoneNote": {
+    "placeholders": {
+      "original": {"type": "String"},
+      "current": {"type": "String"}
+    }
+  },
+  "reminderShiftedNote": "Waktu ini tidak ada di zona {zone} (perubahan DST). Digeser ke {when}.",
+  "@reminderShiftedNote": {
+    "placeholders": {
+      "zone": {"type": "String"},
+      "when": {"type": "String"}
+    }
+  },
+  "reminderAmbiguousNote": "Waktu ini terjadi dua kali di zona {zone}. Dipakai yang lebih awal: {when}.",
+  "@reminderAmbiguousNote": {
+    "placeholders": {
+      "zone": {"type": "String"},
+      "when": {"type": "String"}
+    }
+  },
+  "reminderDoneSnack": "Pengingat selesai",
+  "reminderUndo": "Urungkan",
+
+  "errorTitleEmpty": "Judul tidak boleh kosong.",
+  "errorTitleTooLong": "Judul maksimal 120 karakter.",
+  "errorBodyTooLong": "Detail maksimal 10.000 karakter.",
+  "errorPersonTooLong": "Nama orang maksimal 80 karakter.",
+  "errorItemTooLong": "Nama barang maksimal 120 karakter.",
+  "errorDateInvalid": "Tanggal tidak valid.",
+  "errorDuePast": "Waktu pengingat harus di masa depan.",
+  "errorSaveFailed": "Gagal menyimpan. Coba lagi.",
+  "errorGeneric": "Terjadi masalah. Coba lagi.",
+  "errorDbNewer": "Data dibuat oleh versi aplikasi yang lebih baru.",
+
+  "permissionRationale": "Supaya pengingat muncul, izinkan notifikasi. Catatanmu tetap tersimpan tanpa izin ini.",
+  "permissionRationaleContinue": "Lanjutkan",
+  "permissionRationaleCancel": "Nanti saja",
+  "permissionDeniedBanner": "Izin notifikasi belum aktif. Pengingat tetap terlihat di Hari Ini, tapi tidak ada notifikasi.",
+
+  "todayTitle": "Hari Ini",
+  "todayEmpty": "Belum ada yang perlu diingat hari ini.",
+  "todayEmptyCta": "Catat sesuatu",
+  "todayCoach": "Catatan tanpa pengingat tetap ada di tab Catatan.",
+  "todaySectionOverdue": "Terlewat",
+  "todaySectionToday": "Hari ini",
+  "todaySectionUpcoming": "7 hari ke depan",
+  "todaySeeAll": "Lihat semua",
+  "todayDeletedMemory": "Catatan ini sudah dihapus.",
+
+  "memoriesTitle": "Catatan",
+  "memoriesSearchHint": "Cari judul atau detail...",
+  "memoriesEmpty": "Belum ada catatan. Mulai dari hal kecil yang mudah lupa.",
+  "memoriesNoResults": "Tidak ada hasil untuk \"{query}\".",
+  "@memoriesNoResults": {
+    "placeholders": {
+      "query": {"type": "String"}
+    }
+  },
+  "memoriesArchiveEmpty": "Belum ada catatan yang diarsipkan.",
+  "memoriesLoadMore": "Muat lagi",
+  "memoriesArchivedToggle": "Arsip",
+  "memoriesArchivedBadge": "Diarsipkan",
+
+  "detailCreated": "Dibuat {when}",
+  "@detailCreated": {
+    "placeholders": {
+      "when": {"type": "String"}
+    }
+  },
+  "detailUpdated": "Diperbarui {when}",
+  "@detailUpdated": {
+    "placeholders": {
+      "when": {"type": "String"}
+    }
+  },
+  "detailActionEdit": "Ubah",
+  "detailActionArchive": "Arsipkan",
+  "detailActionUnarchive": "Kembalikan dari arsip",
+  "detailActionDelete": "Hapus",
+  "detailArchiveSnack": "Diarsipkan",
+  "archiveKeepsReminder": "Pengingat tetap aktif dan tetap muncul di Hari Ini.",
+  "detailUnarchiveSnack": "Dikembalikan ke daftar",
+
+  "deleteConfirmNamed": "Hapus \"{title}\"? Pengingatnya juga akan dihapus. Tindakan ini tidak bisa dibatalkan.",
+  "@deleteConfirmNamed": {
+    "placeholders": {
+      "title": {"type": "String"}
+    }
+  },
+
+  "draftDiscardTitle": "Buang catatan ini?",
+  "draftKeep": "Lanjutkan menulis",
+  "draftDiscard": "Buang",
+
+  "exportAction": "Ekspor cadangan",
+  "exportWarning": "File cadangan tidak terenkripsi. Siapa pun yang membukanya bisa membaca semua catatanmu.",
+  "exportContinue": "Lanjutkan",
+  "exportDone": "Cadangan tersimpan: {fileName}",
+  "@exportDone": {
+    "placeholders": {
+      "fileName": {"type": "String"}
+    }
+  },
+  "exportCancelled": "Ekspor dibatalkan.",
+  "exportFailed": "Gagal mengekspor.",
+
+  "importAction": "Impor cadangan",
+  "importPreviewTitle": "Pratinjau impor",
+  "importReplaceTitle": "Ganti seluruh data?",
+  "importReplaceBody": "File ini berisi {memories} catatan dan {reminders} pengingat. Semua data yang ada sekarang akan diganti.",
+  "@importReplaceBody": {
+    "placeholders": {
+      "memories": {"type": "int"},
+      "reminders": {"type": "int"}
+    }
+  },
+  "importConfirm": "Ganti data",
+  "importCancel": "Batal",
+  "importInvalid": "File cadangan tidak valid atau tidak didukung. Data kamu tidak diubah.",
+  "importNotThisApp": "Bukan file cadangan aplikasi ini.",
+  "importVersionUnsupported": "Versi cadangan tidak didukung.",
+  "importInconsistent": "Isi file tidak konsisten.",
+  "importDuplicate": "Data duplikat ditemukan.",
+  "importBadReference": "Referensi data tidak valid.",
+  "importBadMemory": "Data catatan tidak valid.",
+  "importBadReminder": "Data pengingat tidak valid.",
+  "importBadDate": "Tanggal tidak valid.",
+  "importFileTooBig": "File terlalu besar.",
+  "importCancelled": "Impor dibatalkan.",
+  "importFailed": "Impor gagal. Data kamu tidak diubah.",
+  "importSuccess": "Berhasil memulihkan {memories} catatan dan {reminders} pengingat.",
+  "@importSuccess": {
+    "placeholders": {
+      "memories": {"type": "int"},
+      "reminders": {"type": "int"}
+    }
+  },
+  "importWarnTimezone": "Ada pengingat dengan zona waktu yang tidak dikenal.",
+  "importWarnLocalDatetime": "Ada pengingat tanpa waktu lokal yang bisa dibaca.",
+  "importSchedulingWarningTitle": "Pengingat perlu dijadwalkan ulang",
+
+  "notifHiddenBody": "Kamu punya pengingat. Buka aplikasi untuk melihat.",
+  "notifChannelName": "Pengingat",
+  "notifChannelDesc": "Pengingat dari catatanmu.",
+  "notifGenericTitle": "Nanti Ingatkan Aku",
+
+  "privacyTitle": "Privasi",
+  "privacyStatement": "Semua catatan disimpan di HP ini. Tidak ada akun, tidak ada server, tidak ada pelacakan.",
+  "privacyBackupDisabled": "Pencadangan otomatis Android dimatikan supaya catatan tidak ikut ke cloud. Karena itu, ekspor cadangan adalah satu-satunya cara memulihkan data.",
+  "privacyExportUnencrypted": "File ekspor tidak terenkripsi dan tidak bisa dikunci dengan kata sandi.",
+  "privacyHideContent": "Sembunyikan isi notifikasi",
+  "privacyHideContentDesc": "Kalau aktif, layar kunci hanya menampilkan pemberitahuan umum tanpa judul catatan.",
+  "privacyDeleteAll": "Hapus semua data",
+  "deleteAllConfirm": "Hapus semua data? Semua catatan dan pengingat akan dihapus permanen.",
+  "deleteAllConfirmCount": "Hapus semua data? {count} catatan dan semua pengingat akan dihapus permanen, dan aplikasi kembali ke awal.",
+  "@deleteAllConfirmCount": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+
+  "onboardingBody": "Catat dalam beberapa detik: lokasi barang, pinjaman, garansi, jadwal perawatan. Cari lagi kapan saja tanpa internet. Pengingat bisa ditambahkan, tapi catatanmu tetap tersimpan walau notifikasi gagal.",
+  "onboardingStart": "Mulai",
+  "onboardingRestore": "Pulihkan dari cadangan",
+  "onboardingPrivacy": "Tidak ada akun. Tidak ada server. Tinggal di HP ini.",
+
+  "settingsTitle": "Pengaturan",
+  "settingsSectionNotifications": "Notifikasi",
+  "settingsSectionBackup": "Cadangan",
+  "settingsSectionPrivacy": "Privasi",
+  "settingsSectionAbout": "Tentang",
+  "settingsSectionDiagnostics": "Diagnostik",
+  "settingsNotificationsEnabled": "Izin notifikasi",
+  "settingsExactAlarm": "Alarm tepat waktu",
+  "settingsChannelEnabled": "Kanal pengingat",
+  "settingsPermissionNeededCount": "{count} pengingat menunggu izin notifikasi",
+  "@settingsPermissionNeededCount": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "settingsSchedulingFailedCount": "{count} pengingat gagal dijadwalkan",
+  "@settingsSchedulingFailedCount": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "settingsBatteryGuidance": "Beberapa merek HP (Xiaomi, OPPO, vivo, Samsung) membatasi alarm latar belakang. Aplikasi ini tidak bisa menjamin notifikasi tepat waktu; buka pengaturan baterai kalau pengingat sering terlambat.",
+  "settingsOpenAppSettings": "Buka pengaturan aplikasi",
+  "settingsEnabled": "Aktif",
+  "settingsDisabled": "Tidak aktif",
+  "settingsUnavailable": "Tidak tersedia",
+  "settingsAboutLimitations": "Pengingat dikirim oleh sistem Android: pengirimannya best-effort dan bisa tertunda. Catatanmu selalu jadi sumber kebenaran dan selalu terlihat di aplikasi.",
+  "settingsVersion": "Versi {version}",
+  "@settingsVersion": {
+    "placeholders": {
+      "version": {"type": "String"}
+    }
+  },
+  "settingsBackupNudge": "Belum pernah mencadangkan data. Kalau HP hilang, catatan tidak bisa dipulihkan.",
+  "settingsBackupNudgeDismiss": "Tutup",
+  "settingsDiagnosticsLink": "Lihat diagnostik",
+  "settingsPrivacyLink": "Baca pernyataan privasi",
+
+  "diagnosticsTitle": "Diagnostik",
+  "diagnosticsCounts": "Catatan: {memories} • Pengingat: {reminders}",
+  "@diagnosticsCounts": {
+    "placeholders": {
+      "memories": {"type": "int"},
+      "reminders": {"type": "int"}
+    }
+  },
+  "diagnosticsPending": "Pengingat aktif: {count}",
+  "@diagnosticsPending": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "diagnosticsLastReconcile": "Pemeriksaan terakhir: {when}",
+  "@diagnosticsLastReconcile": {
+    "placeholders": {
+      "when": {"type": "String"}
+    }
+  },
+  "diagnosticsLastErrorCode": "Kode kesalahan terakhir: {code}",
+  "@diagnosticsLastErrorCode": {
+    "placeholders": {
+      "code": {"type": "String"}
+    }
+  },
+  "diagnosticsNone": "Tidak ada",
+  "diagnosticsSchema": "Skema basis data: {version}",
+  "@diagnosticsSchema": {
+    "placeholders": {
+      "version": {"type": "int"}
+    }
+  },
+  "diagnosticsTimezone": "Zona perangkat: {zone}",
+  "@diagnosticsTimezone": {
+    "placeholders": {
+      "zone": {"type": "String"}
+    }
+  },
+  "diagnosticsNoContentNotice": "Halaman ini tidak pernah menampilkan isi catatan atau notifikasi.",
+
+  "commonCancel": "Batal",
+  "commonRetry": "Coba lagi",
+  "commonDelete": "Hapus",
+  "commonClose": "Tutup",
+  "commonOk": "Mengerti",
+
+  "a11yClearSearch": "Hapus pencarian",
+  "a11yStatusChip": "Status: {status}",
+  "@a11yStatusChip": {
+    "placeholders": {
+      "status": {"type": "String"}
+    }
+  },
+  "a11yOpenMemory": "Buka catatan {title}",
+  "@a11yOpenMemory": {
+    "placeholders": {
+      "title": {"type": "String"}
+    }
+  }
+}

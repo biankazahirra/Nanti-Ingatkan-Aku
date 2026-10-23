@@ -1,0 +1,35 @@
+import 'app_localizations.dart';
+
+/// Single mapping from a domain failure/message key to localized copy. The
+/// domain never imports Flutter; the presentation boundary resolves keys here.
+String messageForKey(AppLocalizations l10n, String key) => switch (key) {
+  'error.title_empty' => l10n.errorTitleEmpty,
+  'error.title_too_long' => l10n.errorTitleTooLong,
+  'error.body_too_long' => l10n.errorBodyTooLong,
+  'error.person_too_long' => l10n.errorPersonTooLong,
+  'error.item_too_long' => l10n.errorItemTooLong,
+  'error.date_invalid' => l10n.errorDateInvalid,
+  'error.due_past' => l10n.errorDuePast,
+  'error.save_failed' => l10n.errorSaveFailed,
+  'error.db_newer' => l10n.errorDbNewer,
+  'reminder.permission_needed' => l10n.reminderPermissionNeeded,
+  'reminder.failed' => l10n.reminderFailed,
+  'reminder.retry' => l10n.reminderRetry,
+  'export.failed' => l10n.exportFailed,
+  'export.cancelled' => l10n.exportCancelled,
+  'import.invalid' => l10n.importInvalid,
+  'import.not_this_app' => l10n.importNotThisApp,
+  'import.version_unsupported' => l10n.importVersionUnsupported,
+  'import.inconsistent' => l10n.importInconsistent,
+  'import.duplicate' => l10n.importDuplicate,
+  'import.bad_reference' => l10n.importBadReference,
+  'import.bad_memory' => l10n.importBadMemory,
+  'import.bad_reminder' => l10n.importBadReminder,
+  'import.bad_date' => l10n.importBadDate,
+  'import.file_too_big' => l10n.importFileTooBig,
+  'import.cancelled' => l10n.importCancelled,
+  'import.failed' => l10n.importFailed,
+  'import.warn_timezone' => l10n.importWarnTimezone,
+  'import.warn_local_datetime' => l10n.importWarnLocalDatetime,
+  _ => l10n.errorGeneric,
+};

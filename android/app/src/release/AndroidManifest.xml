@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- DEC-01 / §7.9 — the release build has no network permission, even if a
+         dependency tries to contribute one. Debug and profile builds keep it so
+         hot reload still works (see `src/debug/AndroidManifest.xml`). -->
+    <uses-permission android:name="android.permission.INTERNET" tools:node="remove"/>
+</manifest>
