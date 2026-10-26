@@ -79,8 +79,25 @@ permission in release.
 On Flutter 3.47.7 / Dart 3.13.5, against this tree:
 
 - `flutter analyze` → `No issues found!`
-- `dart format --set-exit-if-changed lib test` → `0 changed`
+- `dart format --set-exit-if-changed lib test tool` → `0 changed`
 - `flutter test` → `+202: All tests passed!`
+- `flutter build apk --release --target-platform android-arm64` → `app-release.apk`,
+  19.7 MB. `apkanalyzer manifest print` against that artifact reports
+  `POST_NOTIFICATIONS`, `RECEIVE_BOOT_COMPLETED`, `SCHEDULE_EXACT_ALARM` and
+  `VIBRATE`, no `INTERNET`, `allowBackup="false"`, both notification receivers,
+  `minSdk 26`, `targetSdk 36`.
+- `flutter test tool/ui_screenshots.dart` → ten PNGs in `build/ui_preview/`,
+  rendered from the real widgets, localizations and theme.
+
+### Build notes
+
+- `android/gradle.properties` sizes the Gradle and Kotlin JVMs for a small host.
+  The Flutter template default (`-Xmx8G -XX:MaxMetaspaceSize=4G`) cannot fit a
+  4 GB machine and killed the daemon before the build reached compilation. Raise
+  both values on a roomier build machine.
+- No `integration_test` dev dependency: it puts a plugin in the generated release
+  registrant that no Android artifact provides, which fails
+  `:app:compileReleaseJavaWithJavac`.
 
 ### Known limitations
 
@@ -92,4 +109,4 @@ On Flutter 3.47.7 / Dart 3.13.5, against this tree:
 - Items marked below are implemented but not machine-verifiable without an
   Android device: real notification delivery, permission prompts, behaviour after
   reboot, timezone travel, OEM battery restrictions, TalkBack flows, 48 dp touch
-  targets, the SAF file picker, and the release manifest contents.
+  targets, and the SAF file picker.

@@ -188,14 +188,20 @@ Verified on Flutter 3.47.7 / Dart 3.13.5:
 
 ```
 $ flutter analyze
-No issues found! (ran in 27.9s)
+No issues found! (ran in 16.9s)
 
-$ dart format --set-exit-if-changed lib test
-Formatted 67 files (0 changed) in 0.54 seconds.
+$ dart format --set-exit-if-changed lib test tool
+Formatted 68 files (0 changed) in 0.64 seconds.
 
 $ flutter test
-00:32 +202: All tests passed!
+00:25 +202: All tests passed!
 ```
+
+`tool/ui_screenshots.dart` is a separate harness, not part of the suite: run it
+on its own with `flutter test tool/ui_screenshots.dart` to render ten screens to
+`build/ui_preview/`. It reuses the same fakes and in-memory database as the
+widget tests, and loads the real Roboto and Material Icons faces from the Flutter
+SDK so the PNGs show text rather than placeholder boxes.
 
 Widget tests that touch the database must wrap the call in `withDatabase`, or
 settle the tree with `settleWithDatabase` (`test/support/widget_env.dart`). A
@@ -205,14 +211,26 @@ inside a body hangs until the ten-minute test timeout.
 
 ## 9. Verified versus unverified
 
-This repository was built and analysed on a machine without an Android SDK, so:
+Verified by tooling on Flutter 3.47.7 / Dart 3.13.5 (Windows, JDK 25, Android
+SDK 36):
 
-- Verified by tooling: `flutter analyze`, `flutter test`, ARB generation.
-- **Unverified, must be checked on a real device**: notification delivery and
-  exact-alarm behaviour, permission prompts, behaviour after reboot, timezone
-  changes and travel, OEM battery restrictions, TalkBack flows, 48 dp touch
-  targets, the file picker (SAF) on device, and the release manifest
-  (`INTERNET` removal, `allowBackup=false`) in a built APK.
+- `flutter analyze` clean, `dart format` clean, 202 tests passing, ARB generation.
+- A release APK builds. `flutter build apk --release --target-platform
+  android-arm64` produces `app-release.apk` (19.7 MB). `apkanalyzer manifest
+  print` on that artifact reports four platform permissions —
+  `POST_NOTIFICATIONS`, `RECEIVE_BOOT_COMPLETED`, `SCHEDULE_EXACT_ALARM`,
+  `VIBRATE` — and **no `INTERNET`**, plus `allowBackup="false"`, both
+  `flutter_local_notifications` receivers registered, minSdk 26, targetSdk 36.
+- Every screen renders through the real widgets, localizations and theme:
+  `flutter test tool/ui_screenshots.dart` writes ten PNGs to `build/ui_preview/`
+  (see `gallery.html` there).
+
+**Unverified, must be checked on a real device**: notification delivery and
+exact-alarm behaviour, permission prompts, behaviour after reboot, timezone
+changes and travel, OEM battery restrictions, TalkBack flows, 48 dp touch
+targets, and the file picker (SAF) on device. No device or emulator was
+available on the build host: `adb devices` is empty, and the AVD refuses to boot
+(3996 MiB of RAM against the emulator's 4096 MiB floor).
 
 ## 10. Documented deviations from the PRD
 
